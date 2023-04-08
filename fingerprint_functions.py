@@ -153,7 +153,7 @@ mcc_radius = 70
 mcc_size = 16
 
 g_r = 2 * mcc_radius / mcc_size
-x_r = np.arange(mcc_size) * g_r - (mcc_size / 2) * g_r + g_r / 2
+x_r = np.arange(mcc_size) * g_r - (mcc_size / 2) * g_r + g_r / 2.
 y_r = x_r[..., np.newaxis]
 iy, ix = np.nonzero(x_r ** 2 + y_r ** 2 <= mcc_radius ** 2)
 ref_cell_coords = np.column_stack((x_r[ix], x_r[iy]))
