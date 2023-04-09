@@ -2,12 +2,8 @@ import glob
 import math
 import numpy as np
 import cv2 as cv
-from sklearn.decomposition import PCA
-import pandas
 import matplotlib.pyplot as plt
-from ipywidgets import interact
 import fingerprint_functions as ff
-import torch
 
 # 是否构建模板
 build_tamplate = False
