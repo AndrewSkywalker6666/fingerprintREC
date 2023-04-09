@@ -1,9 +1,17 @@
+# -*- coding: UTF-8 -*-
+#!/usr/bin/python3
+
 import glob
 import math
 import numpy as np
 import cv2 as cv
-import matplotlib.pyplot as plt
 import fingerprint_functions as ff
+import read_fingerprint as rf
+import serial
+
+serial = serial.Serial('/dev/ttyUSB0', 57600, timeout=0.5)  #/dev/ttyUSB0
+
+fingerprint = rf.read_fingerprint(serial)
 
 # 是否构建模板
 build_tamplate = False
